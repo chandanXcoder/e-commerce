@@ -1,17 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import Navbar from './component/Navbar';
+import ProductCard from './component/ProductCard';
+import Footer from './component/Footer';
+import CartItem from './component/CartItem';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
-     < Navbar />
-
+      <Navbar />
+      <ProductCard />
+      <CartItem />
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
