@@ -26,4 +26,4 @@ const CartItem = ({ item, removeFromCart }) => {
 
 export default CartItem;
 
-dijd
+
