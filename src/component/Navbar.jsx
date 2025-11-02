@@ -19,7 +19,7 @@ const Navbar = () => {
           to="/"
           className="text-2xl font-bold text-blue-600 hover:scale-105 hover:text-blue-800 transition"
         >
-          ShopEase
+          BuyUp
         </Link>
 
         <div className="hidden md:flex items-center bg-gray-100 rounded-full px-3 py-2 w-80">
