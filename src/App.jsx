@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Navbar from './component/Navbar';
-
+import Home from './pages/Home';
 import Footer from './component/Footer';
 // import CartItem from './component/CartItem';
 // import Cart from './component/pages/Cart';
@@ -8,6 +8,7 @@ import Footer from './component/Footer';
 // import Products from './component/pages/Products';
 // import Home from './component/pages/Home';
 // import { Routes, Route } from 'react-router-dom';
+
 import './App.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <Home />
       {/* <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
