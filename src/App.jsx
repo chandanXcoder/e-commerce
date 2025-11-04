@@ -3,10 +3,11 @@ import Navbar from './component/Navbar';
 import Home from './pages/Home';
 import Footer from './component/Footer';
 import CartItem from './component/CartItem';
-import Cart from './component/pages/Cart';
-import ProductDetail from './component/pages/ProductDetail';
-import Products from './component/pages/Products';
+import Cart from './pages/Cart';
+import ProductDetail from './pages/ProductDetail';
+import Products from './pages/Products';
 import { Routes, Route } from 'react-router-dom';
+
 
 import './App.css';
 
