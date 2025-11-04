@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto text-center">
         <p className="text-gray-400">&copy; {new Date().getFullYear()} ShopEase. All rights reserved.</p>
         <p className="text-gray-400 mt-2">
-          Built with ❤️ by Chand
+          Built with ❤️ by Chandan
         </p>
       </div>
     </footer>
