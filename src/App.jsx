@@ -2,7 +2,6 @@ import { useState } from 'react';
 import Navbar from './component/Navbar';
 import Home from './pages/Home';
 import Footer from './component/Footer';
-import CartItem from './component/CartItem';
 import Cart from './pages/Cart';
 import ProductDetail from './pages/ProductDetail';
 import Products from './pages/Products';
