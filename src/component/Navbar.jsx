@@ -84,6 +84,7 @@ const Navbar = () => {
                 {link.name}
               </NavLink>
             ))}
+            
 
             <div className="flex items-center gap-6 mt-2">
               <Link to="/cart" onClick={() => setIsOpen(false)}>
