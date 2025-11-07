@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Navbar from './component/Navbar';
 import Home from './pages/Home';
 import Footer from './component/Footer';
@@ -6,15 +5,13 @@ import Cart from './pages/Cart';
 import ProductDetail from './pages/ProductDetail';
 import Products from './pages/Products';
 import { Routes, Route } from 'react-router-dom';
-
+import { CartProvider } from './context/CartContext';
 
 import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
+    <CartProvider>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -23,7 +20,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
       </Routes>
       <Footer />
-    </>
+    </CartProvider>
   );
 }
 

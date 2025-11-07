@@ -1,33 +1,7 @@
 import React, { useContext } from "react";
-import ProductCard from "../components/ProductCard";
+import ProductCard from "../component/ProductCard";
 import { CartContext } from "../context/CartContext";
-
-const products = [
-  {
-    id: 1,
-    title: "Wireless Headphones",
-    price: 59.99,
-    image: "https://via.placeholder.com/300x200?text=Headphones",
-  },
-  {
-    id: 2,
-    title: "Smart Watch",
-    price: 89.99,
-    image: "https://via.placeholder.com/300x200?text=Smart+Watch",
-  },
-  {
-    id: 3,
-    title: "Gaming Mouse",
-    price: 29.99,
-    image: "https://via.placeholder.com/300x200?text=Gaming+Mouse",
-  },
-  {
-    id: 4,
-    title: "Mechanical Keyboard",
-    price: 79.99,
-    image: "https://via.placeholder.com/300x200?text=Keyboard",
-  },
-];
+import { products } from "../data/products";
 
 export default function Products() {
   const { addToCart } = useContext(CartContext);

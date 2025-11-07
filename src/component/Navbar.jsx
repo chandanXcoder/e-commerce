@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { ShoppingCart, Menu, X, Search } from "lucide-react";
 import { Link, NavLink } from "react-router-dom";
+import { CartContext } from "../context/CartContext";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { getCartCount } = useContext(CartContext);
+  const cartCount = getCartCount();
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -49,9 +52,11 @@ const Navbar = () => {
           <div className="flex items-center gap-4">
             <Link to="/cart" className="relative">
               <ShoppingCart className="w-6 h-6 text-gray-700 hover:text-blue-600" />
-              <span className="absolute -top-2 -right-2 bg-blue-600 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
-                2
-              </span>
+              {cartCount > 0 && (
+                <span className="absolute -top-2 -right-2 bg-blue-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                  {cartCount}
+                </span>
+              )}
             </Link>
 
             <Link
@@ -86,8 +91,13 @@ const Navbar = () => {
             ))}
 
             <div className="flex items-center gap-6 mt-2">
-              <Link to="/cart" onClick={() => setIsOpen(false)}>
+              <Link to="/cart" onClick={() => setIsOpen(false)} className="relative">
                 <ShoppingCart className="w-6 h-6 text-gray-700 hover:text-blue-600" />
+                {cartCount > 0 && (
+                  <span className="absolute -top-2 -right-2 bg-blue-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                    {cartCount}
+                  </span>
+                )}
               </Link>
               <Link
                 to="/login"
