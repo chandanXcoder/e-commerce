@@ -30,6 +30,7 @@ const Navbar = () => {
             className="bg-transparent focus:outline-none w-full text-gray-700"
           />
         </div>
+        
 
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
